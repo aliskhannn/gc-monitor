@@ -19,7 +19,7 @@ func NewService(c Collector) *Service {
 	return &Service{collector: c}
 }
 
-// Get retrieves the current Metrics from the Collector.
-func (s *Service) Get() model.Metrics {
+// GetMetrics retrieves the current Metrics from the Collector.
+func (s *Service) GetMetrics() model.Metrics {
 	return s.collector.Collect()
 }
